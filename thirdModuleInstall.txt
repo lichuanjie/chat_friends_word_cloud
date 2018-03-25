@@ -1,0 +1,5 @@
+itchat
+PIL
+wordcloud
+numpy
+jieba
