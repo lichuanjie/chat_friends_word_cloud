@@ -1,2 +1,3 @@
 # chat_friends_word_cloud
 获取朋友圈好友信息生成云词图和头像图片信息
+git merge master_bak
