@@ -8,4 +8,4 @@ python3
 pip3 install -r thirdModuleInstall.txt
 
 #执行
-python3 
+python3 mainService.py
