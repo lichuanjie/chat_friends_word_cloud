@@ -1,14 +1,14 @@
 from service.RockWordCloud import RockWordCloud
 import os
-import chat_friend_image 
+import  service.chat_friend_image as chat_friend_image
 
 if __name__ == '__main__':
 
-    ##chat_friend_image.write_friend_file()
+    #chat_friend_image.write_friend_file()
     #chat_friend_image.send_chat_split_image()
     #chat_friend_image.write_friend_file()
 
-    module_path = os.path.dirname(os.path.dirname(__file__))
+    module_path = os.path.dirname(os.path.abspath(__file__))
     rockCloud = RockWordCloud(module_path + "/document/friends.txt",
                               module_path + "/wordLexicon/SourceHanSerifSC-SemiBold.otf",
                               module_path + "/images")

@@ -40,7 +40,7 @@ def save_friend_image(login_user_file_name):
     friends = get_friends()
     for i in friends:
         img = itchat.get_head_img(userName=i["UserName"])
-        fileName = login_user_file_name + "/" + i["NickName"] + ".jpg"
+        fileName = login_user_file_name + "/" + i["UserName"] + ".jpg"
         fileImage = open(fileName, 'wb')
         fileImage.write(img)
         fileImage.close()
@@ -100,10 +100,10 @@ def send_chat_split_image():
     # save all friend image local
     save_friend_image(login_user)
     split_one_image(login_user)
-    send_user_obj = itchat.search_friends(nickName='笨石头')
-    send_userName = send_user_obj[0]["UserName"]
-    itchat.send_msg("hello send you a big image", toUserName=send_userName)
-    itchat.send_image(login_user + ".jpg", toUserName=send_userName)
+    #send_user_obj = itchat.search_friends(nickName='笨石头')
+    #send_userName = send_user_obj[0]["UserName"]
+    #itchat.send_msg("hello send you a big image", toUserName=send_userName)
+    #itchat.send_image(login_user + ".jpg", toUserName=send_userName)
     itchat.send_image(login_user + ".jpg", "filehelper")
 
 
